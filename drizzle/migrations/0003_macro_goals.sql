@@ -1,0 +1,2 @@
+ALTER TABLE public.user_settings ADD COLUMN IF NOT EXISTS protein_goal_g numeric, ADD COLUMN IF NOT EXISTS carbs_goal_g numeric, ADD COLUMN IF NOT EXISTS fat_goal_g numeric;
+ALTER TABLE public.user_settings ADD CONSTRAINT macro_goals_positive CHECK ((protein_goal_g IS NULL OR protein_goal_g > 0) AND (carbs_goal_g IS NULL OR carbs_goal_g > 0) AND (fat_goal_g IS NULL OR fat_goal_g > 0));

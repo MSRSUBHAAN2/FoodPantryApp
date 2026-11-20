@@ -1,0 +1,1 @@
+DELETE FROM public.food_items; DELETE FROM public.food_preferences; COMMENT ON TABLE public.food_items IS 'DEPRECATED: old Use It Up build, unused'; COMMENT ON TABLE public.food_preferences IS 'DEPRECATED: old Use It Up build, unused';
